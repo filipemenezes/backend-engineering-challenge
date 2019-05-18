@@ -1,4 +1,6 @@
-require "unbabel/cli/version"
+# frozen_string_literal: true
+
+require 'unbabel/cli/version'
 
 module Unbabel
   module Cli
