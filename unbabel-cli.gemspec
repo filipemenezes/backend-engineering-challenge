@@ -6,7 +6,7 @@ require 'unbabel/cli/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'unbabel-cli'
-  spec.version       = Unbabel::Cli::VERSION
+  spec.version       = Unbabel::CLI::VERSION
   spec.authors       = ['Filipe Menezes']
   spec.email         = ['filipepmenezes@gmail.com']
 
@@ -23,6 +23,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = ['unbabel-cli']
   spec.require_paths = ['lib']
+
+  spec.add_dependency 'thor', '~> 0.20'
 
   spec.add_development_dependency 'bundler', '~> 1.17'
   spec.add_development_dependency 'rake', '~> 10.0'
