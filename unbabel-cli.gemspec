@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.executables   = ['unbabel-cli']
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'activesupport'
   spec.add_dependency 'thor', '~> 0.20'
 
   spec.add_development_dependency 'bundler', '~> 1.17'
