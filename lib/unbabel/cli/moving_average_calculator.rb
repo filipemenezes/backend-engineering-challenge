@@ -3,7 +3,7 @@
 module Unbabel
   module CLI
     class MovingAverageCalculator
-      attr_accessor :input_stream, :output_stream, :window_size 
+      attr_accessor :input_stream, :output_stream, :window_size
 
       def initialize(input_stream, window_size)
         self.input_stream = input_stream
