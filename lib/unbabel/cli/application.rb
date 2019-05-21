@@ -6,7 +6,7 @@ module Unbabel
   module CLI
     class Application < Thor
       desc 'average [SOURCE_FILE]', 'Calculate moving average of SOURCE_FILE'
-      option :window_size, type: :numeric, default: 10
+      option :window_size, type: :numeric, default: 10, desc: 'Delivery time for the last X minutes'
       option :output_file, type: :string
       def average(source_file)
         input_stream = Unbabel::CLI::InputStream.new(source_file)
