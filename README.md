@@ -1,15 +1,39 @@
 # Bakckend Engineering Challenge
 
 
-Welcome to our Engineering Challenge repository 🖖
+## Installing and Running
+### Prerequisites
 
-If you found this repository it probably means that you are participating in our recruitment process. Thank you for your time and energy. If that's not the case please take a look at our [openings](https://unbabel.com/careers/) and apply!
+This project has been written as a gem using Ruby 2.6.
 
-Please fork this repo before you start working on the challenge, read it careful and take your time and think about the solution. Also, please fork this repository because we will evaluate the code on the fork.
+Before continue, ensure the [bundler](https://bundler.io/) is installed on the machine.
 
-This is an opportunity for us both to work together and get to know each other in a more technical way. If have some doubt please open and issue and we'll reach out to help.
+### Installation
 
-Good luck!
+```bash
+git clone https://github.com/filipemenezes/unbabel-cli.git
+cd unbabel-cli
+bundle install
+bundle exec rake install
+```
+
+### Running
+
+``` bash
+# Print result to stdout
+unbabel-cli average <input-filename> --window-size 10
+
+# Print result to a file
+unbabel-cli average <input-filename> --window-size 10 --output_file <output-filename>
+
+# For usage help you can run
+unbabel-cli help average
+```
+
+### TODO
+* Edge cases
+
+
 
 ## Challenge Scenario
 
@@ -41,7 +65,7 @@ Your mission is to build a simple command line application that parses a stream 
 If we want to count, for each minute, the moving average delivery time of all translations for the past 10 minutes we would call your application like (feel free to name it anything you like!).
 
 	unbabel_cli --input_file events.json --window_size 10
-	
+
 The input file format would be something like:
 
 	{"timestamp": "2018-12-26 18:11:08.509654","translation_id": "5aa5b2f39f7254a75aa5","source_language": "en","target_language": "fr","client_name": "easyjet","event_name": "translation_delivered","nr_words": 30, "duration": 20}
@@ -85,4 +109,3 @@ Good luck and may the force be with you
 #### Extra points
 
 If you feeling creative feel free to consider any additional cases you might find interesting. Remember this is a bonus, focus on delivering the solution first.
-
