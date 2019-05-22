@@ -31,6 +31,9 @@ unbabel-cli help average
 ```
 
 ### TODO
+* Validate input file content
+* Validate window size
+* Write automated tests
 * Edge cases
 
 
